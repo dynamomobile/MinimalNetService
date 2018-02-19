@@ -6,4 +6,8 @@ It all started with a question in a CocoaHeads Sthlm slack channel. How to send 
 
 This example uses the TXT record in Bonjour to send and update from a Mac app to an iOS app. See the ViewControllers for the code to do this.
 
+Mac [ViewController.swift](/NetServiceMac/NetServiceMac/ViewController.swift)
+
+iOS [ViewController.swift](/NetService/NetService/ViewController.swift)
+
 Have fun.
