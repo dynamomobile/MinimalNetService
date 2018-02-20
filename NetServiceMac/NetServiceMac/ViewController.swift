@@ -9,7 +9,7 @@ class ViewController: NSViewController, NetServiceDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         ns.delegate = self
-        ns.setTXTRecord(NetService.data(fromTXTRecord: ["value": "0".data(using: .utf8)!]))
+        ns.setTXTRecord(NetService.data(fromTXTRecord: ["value": "Initial".data(using: .utf8)!]))
         ns.publish(options: [.listenForConnections, .noAutoRename])
     }
 
@@ -17,8 +17,4 @@ class ViewController: NSViewController, NetServiceDelegate {
         ns.setTXTRecord(NetService.data(fromTXTRecord: ["value": textField.stringValue.data(using: .utf8)!]))
     }
     
-    override var representedObject: Any? {
-        didSet {
-        }
-    }
 }

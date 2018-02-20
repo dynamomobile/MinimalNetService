@@ -4,7 +4,7 @@ class ViewController: UIViewController, NetServiceDelegate {
 
     @IBOutlet var label: UILabel!
     
-    var ns = NetService.init(domain: "local.", type: "_test._tcp.", name: "My Test")
+    var ns = NetService(domain: "local.", type: "_test._tcp.", name: "My Test")
 
     func netService(_ sender: NetService, didUpdateTXTRecord data: Data) {
         let dict = NetService.dictionary(fromTXTRecord: data)
@@ -18,10 +18,6 @@ class ViewController: UIViewController, NetServiceDelegate {
         super.viewDidLoad()
         ns.delegate = self
         ns.startMonitoring()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
 }
